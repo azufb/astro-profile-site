@@ -2,15 +2,41 @@
 ---
 
 <nav>
-  <ul>
-    <li>
+  <ul class='nav'>
+    <li class='nav-list'>
       <a href='/'>プロフィール</a>
+      <span class='slash'>/</span>
     </li>
-    <li>
+    <li class='nav-list'>
       <a href='/skills'>スキル・お仕事</a>
+      <span class='slash'>/</span>
     </li>
-    <li>
+    <li class='nav-list'>
       <a href='/blog'>ブログ</a>
     </li>
   </ul>
 </nav>
+
+<style lang='scss'>
+  @use '../styles/CONST_COLORS';
+
+  .nav {
+    display: flex;
+    list-style: none;
+
+    .nav-list {
+      & a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          border-bottom: 2px solid CONST_COLORS.$main_pink;
+        }
+      }
+    }
+
+    .slash {
+      padding: 0 0.5rem;
+    }
+  }
+</style>
