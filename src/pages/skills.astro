@@ -2,8 +2,65 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle: string = 'スキル・お仕事';
+
+const langList: string[] = ['JavaScript', 'TypeScript'];
+
+const frameworkList: string[] = ['React', 'Vue.js', 'Express', 'NestJS'];
 ---
 
 <BaseLayout>
   <h2>{pageTitle}</h2>
+  <div class='skills'>
+    <h3 class='content-title'>スキル</h3>
+    <div class='skill-content'>
+      <p class='label'>言語</p>
+      <ul class='list'>
+        {langList.map((lang: string) => <li>{lang}</li>)}
+      </ul>
+    </div>
+
+    <div class='skill-content'>
+      <p class='label'>ライブラリ・FW</p>
+      <ul class='list'>
+        {frameworkList.map((framework: string) => <li>{framework}</li>)}
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h3 class='content-title'>お仕事</h3>
+    <div>
+      <p class='work-text'>
+        フロントエンドエンジニア！！<br />
+        React×TypeScriptで開発してます！！<br />
+        今後は、バックエンドのお仕事もできるようになりたいです！！
+      </p>
+    </div>
+  </div>
 </BaseLayout>
+
+<style lang='scss'>
+  .content-title {
+    margin: 0;
+  }
+
+  .skills {
+    margin-bottom: 1.5rem;
+
+    .skill-content {
+      padding-bottom: 1rem;
+
+      .label {
+        margin: 0;
+      }
+
+      .list {
+        margin: 0;
+      }
+    }
+  }
+
+  .work-text {
+    margin: 0;
+  }
+</style>
