@@ -10,6 +10,11 @@ const hobbyList: string[] = [
   'ダラーっとアニメを観ること',
   '美容',
 ];
+const currentInterest: string[] = [
+  'バックエンドに興味があって、ExpressやNestJS使ってみたりしてます',
+  'Railsもちょっと前まで勉強してたので、落ち着いたらまた再開したいです',
+  'もう少し趣味の幅を増やしたい',
+];
 
 const pageTitle: string = 'プロフィール';
 ---
@@ -25,7 +30,13 @@ const pageTitle: string = 'プロフィール';
       <p>
         趣味：
         <ul>
-          {hobbyList.map((hobby) => <li>{hobby}！</li>)}
+          {hobbyList.map((hobby: string) => <li>{hobby}！</li>)}
+        </ul>
+      </p>
+      <p>
+        最近興味あること：
+        <ul>
+          {currentInterest.map((interest: string) => <li>{interest}</li>)}
         </ul>
       </p>
     </div>
