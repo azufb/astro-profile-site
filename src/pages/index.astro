@@ -24,11 +24,9 @@ const pageTitle: string = 'プロフィール';
       <p>好きな食べ物： {favoriteFood}</p>
       <p>
         趣味：
-        <nav>
-          <ul>
-            {hobbyList.map((hobby) => <li>{hobby}！</li>)}
-          </ul>
-        </nav>
+        <ul>
+          {hobbyList.map((hobby) => <li>{hobby}！</li>)}
+        </ul>
       </p>
     </div>
   </div>
