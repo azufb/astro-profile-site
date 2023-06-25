@@ -3,6 +3,15 @@ import Navigation from './Navigation.astro';
 ---
 
 <div>
-  <h1>自己紹介サイト</h1>
+  <h1 class='title'>自己紹介サイト</h1>
   <Navigation />
 </div>
+
+<style lang='scss'>
+  @use '../styles/CONST_COLORS';
+
+  .title {
+    color: CONST_COLORS.$main_pink;
+    font-weight: bold;
+  }
+</style>
