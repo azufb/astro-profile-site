@@ -1,17 +1,9 @@
 ---
-import { TAB_TITLE } from '../ts/CONST_TAB_TITLE';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
 const pageTitle: string = 'プロフィール';
 ---
 
-<html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    <title>{TAB_TITLE}|{pageTitle}</title>
-  </head>
-  <body>
-    <h1>{pageTitle}</h1>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>{pageTitle}</h2>
+</BaseLayout>
