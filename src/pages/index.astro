@@ -27,18 +27,18 @@ const pageTitle: string = 'プロフィール';
       <p>生年月日： {birth}</p>
       <p>出身： {hometown}</p>
       <p>好きな食べ物： {favoriteFood}</p>
-      <p>
+      <div>
         趣味：
         <ul>
           {hobbyList.map((hobby: string) => <li>{hobby}！</li>)}
         </ul>
-      </p>
-      <p>
+      </div>
+      <div>
         最近興味あること：
         <ul>
           {currentInterest.map((interest: string) => <li>{interest}</li>)}
         </ul>
-      </p>
+      </div>
     </div>
   </div>
 </BaseLayout>
