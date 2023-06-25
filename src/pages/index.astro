@@ -1,6 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const name: string = 'あずにゃん';
+const birth: string = '1998/02/10';
+const hometown: string = '兵庫県';
+const favoriteFood: string = 'オムライス';
+const hobbyList: string[] = [
+  '使ったことがないライブラリとかFWを試してみること',
+  'ダラーっとアニメを観ること',
+  '美容',
+];
+
 const pageTitle: string = 'プロフィール';
 ---
 
@@ -8,12 +18,17 @@ const pageTitle: string = 'プロフィール';
   <h2>{pageTitle}</h2>
   <div>
     <div>
-      <p>名前：あずにゃん</p>
-      <p>生年月日：1998/02/10</p>
-      <p>出身：兵庫県</p>
-      <p>好きな食べ物：オムライスとか</p>
+      <p>名前： {name}</p>
+      <p>生年月日： {birth}</p>
+      <p>出身： {hometown}</p>
+      <p>好きな食べ物： {favoriteFood}</p>
       <p>
-        趣味：新しい技術を使ってみたり、ダラーっとアニメ観たりすること！あと、美容！
+        趣味：
+        <nav>
+          <ul>
+            {hobbyList.map((hobby) => <li>{hobby}！</li>)}
+          </ul>
+        </nav>
       </p>
     </div>
   </div>
